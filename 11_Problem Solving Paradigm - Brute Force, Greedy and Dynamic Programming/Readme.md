@@ -1,0 +1,1 @@
+Ringkasan 11 Solving Paradigm - Brute Force, Greedy and Dynamic Programming

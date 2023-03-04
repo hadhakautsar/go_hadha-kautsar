@@ -1,0 +1,1 @@
+Ringkasan 9 String, Advance Function, Pointer, Method, Struct, Interface
