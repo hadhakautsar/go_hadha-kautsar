@@ -1,0 +1,16 @@
+Jawab: 
+1. Ada beberapa kekurangan dalam penulisan kode tersebut, di antaranya:
+	- Penamaan variabel yang buruk dan tidak representatif.
+	- Penulisan struct yang tidak konsisten.
+	- Fungsi-fungsi yang tidak mengikuti aturan untuk penamaan fungsi.
+	- Parameter untuk struct methods seharusnya ditandai sebagai pointer jika ingin mengubah nilai pada struct
+	- Tipe data dari beberapa field pada struct mungkin perlu diperbaiki.
+
+2. Kekurangan tersebut terjadi di hampir seluruh bagian kode, seperti pada penamaan variabel, penulisan struct, dan penamaan fungsi.
+
+3. Alasan dari kekurangan-kekurangan tersebut antara lain:
+	- Penamaan variabel yang buruk dapat menyulitkan pembacaan kode.
+	- Penulisan struct yang tidak konsisten membuat kode menjadi sulit dibaca.
+	- Fungsi-fungsi yang tidak mengikuti aturan penamaan dapat menyebabkan kesulitan dalam memahami kode.
+	- Parameter pada struct methods perlu ditandai sebagai pointer agar nilai pada struct dapat diubah.
+	- Tipe data yang tidak sesuai dapat membuat kode menjadi kurang efisien dan mungkin menghasilkan bug.
