@@ -1,0 +1,11 @@
+Ringkasan 17 System Design
+- Diagram: representasi informasi dalam symbol
+- Flowchart: menggambarkan proses
+- Use Case Diagram: Detail pengguna sistem dan interaksinya terhadap sistem
+- ERD: bagaimana entity berhubungan dalam system
+- Scalability, Reliability, Availability, Efficiency, Sevice & manageability
+- Job/Work Queue, Load balancing
+- Monolithic & Microservices
+- SQL & NoSQL
+- Caching
+- Database Replication
