@@ -13,7 +13,7 @@ import (
 
 // get all users
 func GetUsersController(c echo.Context) error {
-	var users []model.User
+	var users []model.Users
 
 	if err := config.DB.Find(&users).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
@@ -27,7 +27,7 @@ func GetUsersController(c echo.Context) error {
 // get user by id
 func GetUserController(c echo.Context) error {
 	id, _ := strconv.Atoi(c.Param("id"))
-	var user model.User
+	var user model.Users
 
 	if err := config.DB.First(&user, id).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
@@ -41,7 +41,7 @@ func GetUserController(c echo.Context) error {
 
 // create new user
 func CreateUserController(c echo.Context) error {
-	user := model.User{}
+	user := model.Users{}
 	c.Bind(&user)
 
 	if err := config.DB.Save(&user).Error; err != nil {
@@ -57,7 +57,7 @@ func CreateUserController(c echo.Context) error {
 func DeleteUserController(c echo.Context) error {
 	id, _ := strconv.Atoi(c.Param("id"))
 
-	if err := config.DB.Delete(&model.User{}, id).Error; err != nil {
+	if err := config.DB.Delete(&model.Users{}, id).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
@@ -69,7 +69,7 @@ func DeleteUserController(c echo.Context) error {
 // update user by id
 func UpdateUserController(c echo.Context) error {
 	id, _ := strconv.Atoi(c.Param("id"))
-	var user model.User
+	var user model.Users
 
 	if err := config.DB.First(&user, id).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
@@ -89,7 +89,7 @@ func UpdateUserController(c echo.Context) error {
 }
 
 func LoginUserController(c echo.Context) error {
-	user := model.User{}
+	user := model.Users{}
 	c.Bind(&user)
 
 	err := config.DB.Where("email = ? AND password = ?", user.Email, user.Password).First(&user).Error

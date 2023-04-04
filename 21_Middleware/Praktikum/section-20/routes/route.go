@@ -19,7 +19,7 @@ func New() *echo.Echo {
 	e.POST("/users", controller.CreateUserController)
 	e.DELETE("/users/:id", controller.DeleteUserController)
 	e.PUT("/users/:id", controller.UpdateUserController)
-	e.POST("/login", controller.LoginUserController)
+	e.POST("/users/login", controller.LoginUserController)
 	e.GET("/books", controller.GetBooksController)
 	e.GET("/books/:id", controller.GetBookController)
 	e.POST("/books", controller.CreateBookController)
