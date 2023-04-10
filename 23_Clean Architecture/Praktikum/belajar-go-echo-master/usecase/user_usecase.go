@@ -30,7 +30,9 @@ func (u *userUsecase) GetAllUsers() ([]dto.UserResponse, error) {
 	var response []dto.UserResponse
 	for _, user := range users {
 		response = append(response, dto.UserResponse{
-			Email: user.Email,
+			Email:    user.Email,
+			Password: user.Password,
+			Token:    user.Token,
 		})
 	}
 
@@ -41,6 +43,7 @@ func (u *userUsecase) CreateUser(user dto.UserRequest) (dto.UserResponse, error)
 	modelUser := model.User{
 		Email:    user.Email,
 		Password: user.Password,
+		Token:    user.Token,
 	}
 
 	err := u.userRepository.Save(&modelUser)
@@ -49,7 +52,9 @@ func (u *userUsecase) CreateUser(user dto.UserRequest) (dto.UserResponse, error)
 	}
 
 	response := dto.UserResponse{
-		Email: modelUser.Email,
+		Email:    modelUser.Email,
+		Password: user.Password,
+		Token:    user.Token,
 	}
 
 	return response, nil
